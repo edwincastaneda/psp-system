@@ -17,11 +17,20 @@ function csv (){
 }
 </script>
 <?php
-	$csv_p = $_POST['csv_p'];
-	$id_cliente = $_POST['id_cliente'];
-	$mes = $_POST['mes'];
-	$year = $_POST['year'];
-	$ordenar = $_POST['ordenar'];
+//	$csv_p = $_POST['csv_p'];
+//	$id_cliente = $_POST['id_cliente'];
+//	$mes = $_POST['mes'];
+//	$year = $_POST['year'];
+//	$ordenar = $_POST['ordenar'];
+        
+        
+        $csv_p = isset($_POST['csv_p']) ? $_POST['csv_p'] : '';
+        $id_cliente = isset($_POST['id_cliente']) ? $_POST['id_cliente'] : '';
+        $mes = isset($_POST['mes']) ? $_POST['mes'] : '';
+        $year = isset($_POST['year']) ? $_POST['year'] : '';
+        $ordenar = isset($_POST['ordenar']) ? $_POST['ordenar'] : '';
+        
+        
    // echo "$id_cliente";
 	echo "<h3>Reporte Presupuestal General </h3>";
 	?>
@@ -45,7 +54,7 @@ function csv (){
 			<option value="11" <?php if($mes =='11') { echo "selected"; }?>>Noviembre</option>			
 			<option value="12" <?php if($mes =='12') { echo "selected"; }?>>Diciembre</option>						
 		</select>
-		<strong>Año:</strong>
+		<strong>A&ntilde;o:</strong>
 		<select id="year" name="year" >
 		<option value="t">*Todos*</option>
 			<option value="2008" <?php if($year =='2008') { echo "selected"; }?>>2008</option>			
@@ -65,7 +74,7 @@ function csv (){
 	</fieldset>
 	</form>
 	<input type="image" src="iconos/reporte.png" onClick="csv()" alt="exportar" title="Exportar a CSV">
-	<input type="image" src="iconos/icono-imprimir.jpg" onclick="javascript:window.print()" alt="Imprimir esta página" title="Imprimir esta página"/> 
+	<input type="image" src="iconos/icono-imprimir.jpg" onclick="javascript:window.print()" alt="Imprimir esta pï¿½gina" title="Imprimir esta pï¿½gina"/> 
 <?php
 	include "conexion.php";
 	
@@ -94,7 +103,7 @@ function csv (){
 	$consulta = mysql_query($stmt, $conexion);
 	
 	echo "<tr>";
-	echo "<th><strong>Año</strong> </th>";
+	echo "<th><strong>A&ntilde;o</strong> </th>";
 	echo "<th ><strong>Mes</strong> </th>";
 	
 	echo "<th ><strong>Monto Presupuestado Q.</strong> </th>";

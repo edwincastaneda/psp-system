@@ -14,7 +14,7 @@
 <div  id="nav">
 <ul>
   <li class="first"><a href='catalogos.php' >Catalogos</a>  </li>
-    <li><a href='presupuesto.php' >Diseñar Presupuesto</a>  </li>
+    <li><a href='presupuesto.php' >Dise&ntilde;ar Presupuesto</a>  </li>
     <li><a href='reportes.php' >Reporteria</a></li>
 	<li><a href='acerca.php' >Acerca de..</a></li>
 	

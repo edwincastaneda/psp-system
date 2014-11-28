@@ -1,5 +1,5 @@
 
-<?
+<?php
 $dbhost="localhost";
 $dbusuario="developer";
 $dbpassword="developer";

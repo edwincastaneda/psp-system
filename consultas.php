@@ -4,7 +4,7 @@ session_start();
 <?php include "verifica-logeo.php"?>
 <?php //include "login.php"?>
 
-<?
+<?php
 include "index.php";
  $estado = $_SESSION["ESTADO"];
  $formulario = $_GET["form"];

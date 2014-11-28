@@ -43,10 +43,17 @@ jQuery(function($){
 });
 </script>
 <?php 
-$action=$_GET['action'];
-$id_cliente=$_GET['id_cliente'];
-$fecha=$_GET['fecha'];
-$id_cotizacion = $_GET['id_cotizacion'];
+//$action=$_GET['action'];
+//$id_cliente=$_GET['id_cliente'];
+//$fecha=$_GET['fecha'];
+//$id_cotizacion = $_GET['id_cotizacion'];
+
+$action = isset($_GET['action']) ? $_GET['action'] : '';
+$id_cliente = isset($_GET['id_cliente']) ? $_GET['id_cliente'] : '';
+$fecha = isset($_GET['fecha']) ? $_GET['fecha'] : '';
+$id_cotizacion = isset($_GET['id_cotizacion']) ? $_GET['id_cotizacion'] : '';
+
+
 $id_status="";
 
 if ($id_cotizacion !=NULL && $id_cotizacion !="" ) { 

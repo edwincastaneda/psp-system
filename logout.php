@@ -1,12 +1,13 @@
 <?php 
 	session_start();
+        include "index.php";
 	unset($_SESSION["ESTADO"]);
 	unset($_SESSION["USER"]);
 	unset($_SESSION["id_usuario"]);
 	session_destroy();
  
-	// Para borrar las cookies asociadas a la sesión
-	// Es necesario hacer una petición http para que el navegador las elimine
+	// Para borrar las cookies asociadas a la sesiï¿½n
+	// Es necesario hacer una peticiï¿½n http para que el navegador las elimine
 	if ( isset( $_COOKIE[ "ESTADO" ] ) ) {
 		if ( setcookie(session_name(), '', time()-3600, '/') ) {
 			header("Location: /index.php");
@@ -19,6 +20,7 @@
 			exit();   
 		}
 	}
-	echo "Cerrando Sesion...<META HTTP-EQUIV=refresh CONTENT ='2; URL =index.php' >";
+	echo "Cerrando Sesion...<META HTTP-EQUIV=refresh CONTENT ='1; URL =index.php' >";
 	 
 ?>
+<?php include "footer.php";?>

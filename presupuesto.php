@@ -22,9 +22,12 @@ jQuery(function($){
 	$page_editar = "nuevo_presupuesto.php";
 	$page_detalle = "nuevo_presupuesto.php";
 	$page_agregar = "nuevo_presupuesto.php";
-	$id_cliente = $_POST['id_cliente'];
-	$fecha_de = $_POST['fecha_de'];
-	$fecha_a = $_POST['fecha_a'];
+//	$id_cliente = $_POST['id_cliente'];
+//	$fecha_de = $_POST['fecha_de'];
+//	$fecha_a = $_POST['fecha_a'];
+        $id_cliente = isset($_POST['id_cliente']) ? $_POST['id_cliente'] : '';
+        $fecha_de = isset($_POST['fecha_de']) ? $_POST['fecha_de'] : '';
+        $fecha_a  = isset($_POST['fecha_a']) ? $_POST['fecha_a'] : '';
    // echo "$id_cliente";
 	echo "<h3>Presupuesto</h3>";
 	?>
@@ -59,9 +62,9 @@ jQuery(function($){
 	$consulta = mysql_query($stmt, $conexion);
 	
 	echo "<tr>";
-	echo "<th><strong>No. Cotización</strong> </th>";
+	echo "<th><strong>No. Cotizaci&oacute;n</strong> </th>";
 	echo "<th ><strong>Cliente</strong> </th>";
-	echo "<th ><strong>Fecha de Realización</strong> </th>";
+	echo "<th ><strong>Fecha de Realizaci&oacute;n</strong> </th>";
 	echo "<th ><strong>Estado</strong> </th>";
 	echo "<th ><div style= 'width:60px'>Total Q.</div></th>";
 	echo "<th ><strong>Usuario que Creo</strong> </th>";
