@@ -4,8 +4,8 @@ include "index.php";
 include "verifica-logeo.php";
 ?>
 <div id= "featured">
-<script src="jquery-1.6.1.min.js" type="text/javascript"></script>
-<script src="jquery.maskedinput-1.3.js" type="text/javascript"></script>
+<script src="js/jquery-1.6.1.min.js" type="text/javascript"></script>
+<script src="js/jquery.maskedinput-1.3.js" type="text/javascript"></script>
 <script >
 jQuery(function($){
    $("#fecha_de").mask("9999-99-99");
@@ -17,21 +17,13 @@ function csv (){
 }
 </script>
 <?php
-//	$csv_p = $_POST['csv_p'];
-//	$id_cliente = $_POST['id_cliente'];
-//	$mes = $_POST['mes'];
-//	$year = $_POST['year'];
-//	$ordenar = $_POST['ordenar'];
-        
-        
+
         $csv_p = isset($_POST['csv_p']) ? $_POST['csv_p'] : '';
         $id_cliente = isset($_POST['id_cliente']) ? $_POST['id_cliente'] : '';
         $mes = isset($_POST['mes']) ? $_POST['mes'] : '';
         $year = isset($_POST['year']) ? $_POST['year'] : '';
         $ordenar = isset($_POST['ordenar']) ? $_POST['ordenar'] : '';
         
-        
-   // echo "$id_cliente";
 	echo "<h3>Reporte Presupuestal General </h3>";
 	?>
 	<form name="form1" id= "form1" action="reporte_general.php" method="post">
@@ -103,7 +95,7 @@ function csv (){
 	$consulta = mysql_query($stmt, $conexion);
 	
 	echo "<tr>";
-	echo "<th><strong>A&ntilde;o</strong> </th>";
+	echo "<th><strong>Año</strong> </th>";
 	echo "<th ><strong>Mes</strong> </th>";
 	
 	echo "<th ><strong>Monto Presupuestado Q.</strong> </th>";

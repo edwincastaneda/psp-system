@@ -5,10 +5,10 @@ include "verifica-logeo.php";
 $id_usuario=$_SESSION["id_usuario"];
 ?>
 <div id= "featured">
-<link rel=stylesheet type="text/css" media=all href="calendar.css">
-<script src="jquery-1.6.1.min.js" type="text/javascript"></script>
-<script src="jquery.maskedinput-1.3.js" type="text/javascript"></script>
-<script src="calendar.js" type="text/javascript"></script>
+<link rel=stylesheet type="text/css" media=all href="css/calendar.css">
+<script src="js/jquery-1.6.1.min.js" type="text/javascript"></script>
+<script src="js/jquery.maskedinput-1.3.js" type="text/javascript"></script>
+<script src="js/calendar.js" type="text/javascript"></script>
 <script >
 function save() {
 		document.form1.elements.action.value="add";
@@ -43,16 +43,12 @@ jQuery(function($){
 });
 </script>
 <?php 
-//$action=$_GET['action'];
-//$id_cliente=$_GET['id_cliente'];
-//$fecha=$_GET['fecha'];
-//$id_cotizacion = $_GET['id_cotizacion'];
 
 $action = isset($_GET['action']) ? $_GET['action'] : '';
 $id_cliente = isset($_GET['id_cliente']) ? $_GET['id_cliente'] : '';
 $fecha = isset($_GET['fecha']) ? $_GET['fecha'] : '';
 $id_cotizacion = isset($_GET['id_cotizacion']) ? $_GET['id_cotizacion'] : '';
-
+$total = isset($_GET['total']) ? $_GET['total'] : '';
 
 $id_status="";
 
@@ -99,13 +95,13 @@ if ($action=="add") {
 	<input type="hidden" id="id_cotizacion" name = "id_cotizacion" value="<?php echo $id_cotizacion?>">
 	<input type="hidden" id="action" name = "action" value="<?php echo $action?>">
 	<span>Cliente:</span>
-	<select id="id_cliente" name="id_cliente" value="<?php echo $_GET['id_cliente']?> " <?php echo $readonly?>>
+	<select id="id_cliente" name="id_cliente" value="<?php echo $id_cliente?> " <?php echo $readonly?>>
 	<?php  include "clientes.php"; ?>
 	</select><br>
 	<span>Fecha:</span>
-	<input id="fecha" name="fecha" maxlength="10"type= "text" value="<?php echo $_GET['fecha']?>" <?php echo $readonly?>/> <input type=button name=cal value=... onclick="return showCalendar('fecha','y-mm-dd','');"/><br>
+	<input id="fecha" name="fecha" maxlength="10"type= "text" value="<?php echo $fecha?>" <?php echo $readonly?>/> <input type=button name=cal value=... onclick="return showCalendar('fecha','y-mm-dd','');"/><br>
 	<!--<span>Total	:</span>
-	<input id="total" name="total" type= "text" value="<?php echo $_GET['total']?>"/><br>-->
+	<input id="total" name="total" type= "text" value="<?php echo $total; ?>"/><br>-->
 	<?php  if ($action!="add" && $action!="add_prod" && $action!="del_prod" && $action!="update" && $action!="view") {?>
 	<input type="button" onClick="save()" value="Guardar" <?php echo $readonly?>/>
 

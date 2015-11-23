@@ -5,10 +5,10 @@ include "verifica-logeo.php";
 
 ?>
 <div id= "featured">
-<link rel=stylesheet type="text/css" media=all href="calendar.css">
-<script src="calendar.js" type="text/javascript"></script>
-<script src="jquery-1.6.1.min.js" type="text/javascript"></script>
-<script src="jquery.maskedinput-1.3.js" type="text/javascript"></script>
+<link rel=stylesheet type="text/css" media=all href="css/calendar.css">
+<script src="js/calendar.js" type="text/javascript"></script>
+<script src="js/jquery-1.6.1.min.js" type="text/javascript"></script>
+<script src="js/jquery.maskedinput-1.3.js" type="text/javascript"></script>
 <script >
 jQuery(function($){
    $("#fecha_de").mask("9999-99-99");
@@ -16,19 +16,14 @@ jQuery(function($){
 });
 </script>
 <?php
- 
-    $page_change = "change_presupuesto.php";
+        $page_change = "change_presupuesto.php";
 	$page_eliminar = "eliminar_presupuesto.php";
 	$page_editar = "nuevo_presupuesto.php";
 	$page_detalle = "nuevo_presupuesto.php";
 	$page_agregar = "nuevo_presupuesto.php";
-//	$id_cliente = $_POST['id_cliente'];
-//	$fecha_de = $_POST['fecha_de'];
-//	$fecha_a = $_POST['fecha_a'];
         $id_cliente = isset($_POST['id_cliente']) ? $_POST['id_cliente'] : '';
         $fecha_de = isset($_POST['fecha_de']) ? $_POST['fecha_de'] : '';
         $fecha_a  = isset($_POST['fecha_a']) ? $_POST['fecha_a'] : '';
-   // echo "$id_cliente";
 	echo "<h3>Presupuesto</h3>";
 	?>
 	<form action="presupuesto.php" method="post">
@@ -90,9 +85,7 @@ jQuery(function($){
 			echo "<td ><a href='javascript:;' OnClick=\"if(confirm('Esta seguro de Eliminar?')) {location.href='$page_eliminar?id=$resultado[id_cotizacion]' } \"><img src='iconos/borrar.png' alt='eliminar' title='Eliminar'></a></td>";
 		  } else {
 			 echo "<td ></td>";
-		  }
-		 // echo "<a href='$page_editar?action=view&id_cotizacion=$resultado[id_cotizacion]&id_cliente=$resultado[id_cliente]&fecha=$resultado[fecha]'>Editar</a>";
-		  //echo "<br />"; 
+		  } 
 		 echo "</tr>";
 	}
 	echo "</table>";

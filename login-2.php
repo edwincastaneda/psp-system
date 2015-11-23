@@ -14,7 +14,7 @@ if ($id_usuario != "0") {
 	$_SESSION["ESTADO"] = "LOGEADO";
 	$_SESSION["USER"] = $usuario;
 	$_SESSION["id_usuario"] = $id_usuario;
-	echo "<META HTTP-EQUIV=refresh CONTENT ='0; URL =index.php' >";
+	echo "<META HTTP-EQUIV=refresh CONTENT ='0; URL =catalogos.php' >";
  } else {
     echo "<META HTTP-EQUIV=refresh CONTENT ='0; URL =index.php?msg=err' >";
  }

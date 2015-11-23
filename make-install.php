@@ -16,7 +16,7 @@ if($install == 1){// Igual a 1 ejecutamos la consulta
 $conexion = mysql_connect($host, $user, $pass);
 
 if (mysql_query($sql_createdb, $conexion)) {
-	echo "Database created successfully\n";
+	echo "Base de datos creada con exito...";
 } 
 
 //Conecto con la DB
@@ -265,7 +265,7 @@ die;
  mysql_close($conexion);
 
 $archivo='
-<?
+<?php
 $dbhost="'.$host.'";
 $dbusuario="'.$user.'";
 $dbpassword="'.$pass.'";
