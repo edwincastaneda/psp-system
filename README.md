@@ -1,6 +1,6 @@
 INSTALACION
 
-1. Subir los archivos al servidor
+1. Subir los archivos al servidor que soporte php
 2. En el navegador web colocar la direccion del archivo "install.php" que se encuentra
 en los archivos fuente del sistema.
 
@@ -13,10 +13,10 @@ Ejemplo
 3. Ingresar los siguientes datos:
 
 - IP del servidor de base de datos
-- Usuario Root (Privilegios de Crear Bases de datos y Tablas)
+- Usuario root (o usuario con privilegios para crear bases de datos y tablas)
 - Password de usuario root
-- Nombre de la base de datos previamente creada
-- Usuario Para la Aplicacion
-- Contraseña del usuario de la aplicacion
+- Nombre de la base de datos a crear
+- Usuario para la aplicacion
+- Contraseña del usuario de la aplicación
 
-4. Con estos pasos ha terminado de instalar el sistema de presupuestos en su servidor.
+4. La instalación agrega información de prueba la cual debe de eliminar o modificar.
