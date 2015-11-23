@@ -16,7 +16,7 @@ Ejemplo
 - Usuario root (o usuario con privilegios para crear bases de datos y tablas)
 - Password de usuario root
 - Nombre de la base de datos a crear
-- Usuario para la aplicacion
+- Usuario para la aplicación
 - Contraseña del usuario de la aplicación
 
 4. La instalación agrega información de prueba la cual debe de eliminar o modificar.
